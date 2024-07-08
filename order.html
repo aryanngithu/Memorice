@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+/* styles.css */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Gap between product cards */
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.order-button {
+    background-color: #ffcc29;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #ffc107;
+}
+/* styles.css */
+#corner-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#corner-button:hover {
+    background-color: #0056b3;
+}
+
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ice Cream Shop</title>
+<h1 style="font-size:50px;text-align:center;">Order From Us</h1>
+
+</head>
+<body>
+<a href="index.html">
+<button id="corner-button">Home</button>
+</a>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="vanilla.jpg" alt="Vanilla">
+            <h3>Vanilla</h3>
+            <p class="price">$4.99</p>
+<button onclick="window.location.href='orderdetails.html'">Order Now</button>
+</div>
+         
+
+<div class="product-card">
+            <img src="strawberry.jpg" alt="Strawberry">
+            <h3>Strawberry</h3>
+            <p class="price">$5.49</p>
+<button onclick="window.location.href='orderdetails.html'">Order Now</button>
+ </div>
+ 
+
+<div class="product-card">
+            <img src="blueberry.jpg" alt="Blueberry">
+            <h3>Blueberry</h3>
+            <p class="price">$5.49</p>
+<button onclick="window.location.href='orderdetails.html'">Order Now</button>
+
+       </div>
+
+
+
+    </div>
+</body>
+</html>

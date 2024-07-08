@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #ff8c00;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Login Form Styling */
+#login {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+#login h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.input-wrapper i {
+    color: #888;
+    margin-right: 10px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    font-size: 16px;
+}
+
+.input-wrapper input:focus {
+    border-color: #007bff;
+}
+
+.input-wrapper:hover {
+    border-color: #007bff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #6e8efb, #877ce3);
+}
+
+p {
+    text-align: center;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+<script src="script.js">
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Form validation (if needed)
+  
+  // Form data processing
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  
+  // Simulate a login process
+  if (email === 'user@example.com' && password === 'password') {
+    alert('Login successful!');
+    // Redirect to a protected page
+    window.location.href = 'dashboard.html';
+  } else {
+    alert('Invalid email or password. Please try again.');
+  }
+  
+  // Optionally, reset the form
+  event.target.reset();
+});
+
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Brand - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="order.html">Order From Us</a></li>
+                <li><a href="testlogin.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="login">
+            <h1>Login</h1>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MemorIce. All rights reserved.</p>
+    </footer>
+</body>
+</html>
