@@ -1,34 +1,172 @@
-<div style="text-align:center;margin-top:40px;"><img src="logo.png"
-width="600"
-height="300"><div>
-<div style="text-align:center;">
-<a style="padding-right: 20px;" href="index.html">Home</a>
-<a style="padding-right: 20px;" href="about.html">About</a>
-<a style="padding-right: 20px;" href="services.html">Services</a>
-<a style="padding-right: 20px;" href="order.html">Order</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-<h1 style="font-size:50px;text-align:center;">A new adventure in Icecream</h1>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
 
-<p style="font-size:20px;text-align:center;line-height: 30px;margin-bottom: 50px;">We believe that simple nature food tastes best.<br>Our ice cream is lovingly handmade in small batches in the<br> heart using only simple,natural and fresh local ingredients of adventure and discovery</p>
+body {
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
 
+header {
+    background: #ff8c00;
+    color: #fff;
+    padding: 1rem 0;
+}
 
-<div style="text-align:center;margin-bottom: 50px;"><a style="font-size:20px; background-color: red; padding: 15px 25px 15px 25px; color: white;" href="testlogin.html">Login</a></div>
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 
-<div style="text-align:center;margin-bottom: 50px;"><a style="font-size:20px; background-color: red; padding: 15px 25px 15px 25px; color: white;" href="https://en.wikipedia.org/wiki/Ice_cream">Read more</a></div>
+nav ul li {
+    margin: 0 1rem;
+}
 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
 
+nav ul li a:hover {
+    color: #333;
+}
 
-<h1 style="font-size:50px;text-align:center; font-family: Arial">Our core flavours</h1>
-<img style="width: 33%" src="image01.jpg">
-<img style="width: 33%" src="image02.jpg">
-<img style="width: 33%"src="image03.jpg">
+.logo-container {
+    text-align: center;
+    margin-top: 40px;
+}
 
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
 
-<h1 style="font-size:50px;text-align:center;">Services</h1>
+.intro h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
 
-<div style="text-align:center;">
-<video src="video/icecream.mp4" controls />
-</div>
+.intro p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
 
+.btn-container {
+    margin-bottom: 50px;
+}
 
+.btn {
+    font-size: 20px;
+    background-color: red;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+.flavors h1 {
+    font-size: 50px;
+    margin: 50px 0 20px;
+}
+
+.flavors-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flavors-gallery img {
+    width: 33%;
+}
+
+.services h1 {
+    font-size: 50px;
+    margin: 50px 0 20px;
+}
+
+.video-container {
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Brand - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" width="600" height="300">
+        </div>
+        <section class="intro">
+            <h1>A new adventure in Icecream</h1>
+            <p>We believe that simple natural food tastes best. Our ice cream is lovingly handmade in small batches in the heart using only simple, natural, and fresh local ingredients of adventure and discovery.</p>
+            <div class="btn-container">
+                <a href="testlogin.html" class="btn">Login</a>
+                <a href="https://en.wikipedia.org/wiki/Ice_cream" class="btn">Read more</a>
+            </div>
+        </section>
+        <section class="flavors">
+            <h1>Our core flavours</h1>
+            <div class="flavors-gallery">
+                <img src="image01.jpg" alt="Flavor 1">
+                <img src="image02.jpg" alt="Flavor 2">
+                <img src="image03.jpg" alt="Flavor 3">
+            </div>
+        </section>
+        <section class="services">
+            <h1>Services</h1>
+            <div class="video-container">
+                <video src="video/icecream.mp4" controls></video>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MemorIce. All rights reserved.</p>
+    </footer>
+</body>
+</html>
